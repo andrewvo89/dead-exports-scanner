@@ -20,8 +20,8 @@ yarn start --path=/path/to/project/src
 
 ## Options
 
-| Option   | Description                                                                               | Example                     | Required |
-| -------- | ----------------------------------------------------------------------------------------- | --------------------------- | -------- |
-| --path   | Path to the project directory you want to scan                                            | --path=/path/to/project/src | true     |
-| --ext    | File extensions to scan for . Defaults to js,jsx,tsx,ts                                   | --ext=tsx,ts                | false    |
-| --ignore | Folder names to ignore. Defaults to node_modules,build,dist,coverage,public,static,assets | --ignore=node_modules,build | false    |
+| Option   | Description                                                                                | Example                     | Required |
+| -------- | ------------------------------------------------------------------------------------------ | --------------------------- | -------- |
+| --path   | Path to the project directory you want to scan.                                            | --path=/path/to/project/src | true     |
+| --ext    | File extensions to scan for. Defaults to js,jsx,tsx,ts.                                    | --ext=tsx,ts                | false    |
+| --ignore | Folder names to ignore. Defaults to node_modules,build,dist,coverage,public,static,assets. | --ignore=node_modules,build | false    |
