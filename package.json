@@ -1,0 +1,16 @@
+{
+  "name": "dead-exports-scanner",
+  "description": "This tool scans for dead exports for JavaScript and TypeScript projects using ES6 import/export syntax",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.1.7",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "start": "ts-node index.ts"
+  }
+}
