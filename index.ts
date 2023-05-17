@@ -21,7 +21,7 @@ async function getAllFiles(home: string, extensions: string[], ignore: string[])
     const filePath = path.join(home, file);
     const stat = await fs.lstat(filePath);
     if (stat.isDirectory()) {
-      // Skip node_modules
+      // Skip folders like node_modules, build, dist etc.
       if (ignore.includes(file)) {
         continue;
       }
@@ -57,8 +57,7 @@ async function getExports(files: string[]): Promise<FileDetails[]> {
       /export\s+(const|let|var|class|interface|type|enum|default async function|default function|function|default)\s+(\w+)/g,
     );
 
-    const validMatches: string[] = exportsStatements ? exportsStatements : [];
-
+    const validMatches: string[] = exportsStatements ?? [];
     const exports = validMatches.reduce<string[]>((list, statement) => {
       const split = statement.split(' ');
       if (split.length === 0) {
